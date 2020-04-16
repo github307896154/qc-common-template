@@ -1,0 +1,135 @@
+html, body, #app {
+  height: 100%;
+}
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+/* 修改做成菜单iview样式 */
+.ivu-layout-sider{
+  background: #4454b8 !important;
+}
+.ivu-menu-dark {
+  background: #4454b8 !important;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+  background: #4454b8 !important;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened {
+  background: #3d4aa9 !important;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened .ivu-menu-submenu-title {
+  background: #4454b8 !important;
+}
+
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover,
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover {
+  color: #fff !important;
+  background: #3d4aa9 !important;
+}
+
+.ivu-table-row-hover td,.ivu-table-row-highlight td{
+    background: #d3d4d5 !important;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item,
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title {
+  color: #bfcafd !important;
+}
+.demo-spin-icon-load{
+  animation: ani-demo-spin 1s linear infinite;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active,
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active:hover {
+  border-right: none !important;
+  color: #3d4aa9 !important;
+  background: #ffffff !important;
+}
+.ivu-layout-sider-children{
+  overflow-y: scroll;
+  margin-right: -18px;
+}
+
+//表格全局样式
+.table-opt-btn{
+  margin: 0 5px;
+}
+.action-bar {
+  padding: 10px 0;
+  min-height: 60px;
+  line-height: 60px;
+  .action {
+    &-input {
+      display: inline-block;
+      width: 200px;
+      margin-left: 2px;
+    }
+    &-btn {
+      margin-left: 2px;
+    }
+  }
+}
+.tool-label {
+  margin-left: 5px;
+}
+//禁止用户选中文字
+.no-select-text{
+  user-select: none;
+}
+
+ul{
+  list-style: none;
+}
+
+/* 表格按钮span 渲染样式 */
+
+.edit-span {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: green;
+  cursor: pointer;
+  text-align: center;
+}
+
+.edit-span:hover {
+  color: #2d8cf8;
+}
+
+.del-span {
+  color: red;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.del-span:hover {
+  color: #ffb700;
+}
