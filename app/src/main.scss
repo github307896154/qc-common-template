@@ -1,0 +1,93 @@
+// 清除浮动
+@mixin clearfix {
+  &:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+// 禁止选择文字
+@mixin no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+// 禁止长按弹出菜单、下载图片
+@mixin no-callout {
+  -webkit-touch-callout: none;
+}
+
+// 文字溢出截断
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 文字强制换行
+@mixin break-line {
+  //只对英文起作用，以字母作为换行依据。
+  word-break: break-all;
+  // 只对英文起作用，以单词作为换行依据。
+  word-wrap: break-word;
+  // 只对中文起作用，强制换行。
+  white-space: pre-wrap;
+  // 防止溢出
+  text-overflow: ellipsis;
+}
+
+// IOS 平滑滚动
+@mixin smooth-scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// 动画硬件加速
+@mixin animate {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+// px转rem
+$max-rem: 16;
+@function px2rem($px) {
+  @return $px / 750 * $max-rem+rem;
+}
+
+// 1像素边框
+@mixin border($position: top, $color: #ddd) {
+  position: relative;
+  &:before {
+      content: " ";
+      display: inline-block;
+      position: absolute;
+      @if $position==top or $position==bottom {
+          width: 100%;
+      }
+      @else {
+          height: 100%;
+      }
+      @if $position==top {
+          top: 0;
+          border-top: 1px solid $color;
+      }
+      @else if $position==bottom {
+          bottom: 0;
+          border-bottom: 1px solid $color;
+      }
+      @else if $position==left {
+          left: 0;
+          border-left: 1px solid $color;
+      }
+      @else {
+          right: 0;
+          border-right: 1px solid $color;
+      }
+  }
+}
+
+$red: #FF5648!important;
+$green: #52CC7A!important;
+$blue: #4a90e2!important;
